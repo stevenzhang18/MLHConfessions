@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!-- Basic Page Needs
+     ================================================== -->
+  <meta charset="utf-8">
+  <title>Login/Register</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+     ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- CSS
+     ================================================== -->
+  <link rel="stylesheet" href="css/access.css">
+</head>
+<body>
+  {% if failed %}
+
+      <strong>Login failed!</strong> Check your credentials and try again.
+
+  {% endif %}
+  <div class="container">
+       <div class="flat-form">
+           <ul class="tabs">
+               <li>
+                   <a href="#login" class="active">Login</a>
+               </li>
+               <li>
+                   <a href="#register">Register</a>
+               </li>
+               <li>
+                   <a href="#reset">Reset Password</a>
+               </li>
+           </ul>
+           <div id="login" class="form-action show">
+               <h1>Login on webapp</h1>
+               <p>
+                   If you're an admin and haven't created an account.
+                   <br>Please sign up!</br>
+                   Both survey takers and admins login here.
+               </p>
+               <form action="/access" method="post">
+                   <ul>
+                       <li>
+                           <input type="text" name = "u" placeholder="Email" />
+                       </li>
+                       <li>
+                           <input type="password" name = "p" placeholder="Password" />
+                       </li>
+                       <li>
+                           <input type="submit" value="Login" class="button" />
+                       </li>
+                   </ul>
+               </form>
+           </div>
+           <!--/#login.form-action-->
+           <div id="register" class="form-action hide">
+               <h1>Register</h1>
+               <p>
+                   You should totally sign up for our super awesome service.
+                   It's what all the cool kids are doing nowadays.
+               </p>
+               <form action="/signup" method="post">
+                   <ul>
+                       <li>
+                          <input type="text" name="company" placeholder="Company" />
+                       </li>
+                       <li>
+                           <input type="text" name="email" placeholder="Email" />
+                       </li>
+                       <li>
+                           <input type="password" name="password" placeholder="Password" />
+                       </li>
+                       <li>
+                           <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+                       </li>
+                       <li>
+                           <input type="submit" value="Sign Up" class="button" />
+                       </li>
+                   </ul>
+               </form>
+           </div>
+           <!--/#register.form-action-->
+           <div id="reset" class="form-action hide">
+               <h1>Reset Password</h1>
+               <p>
+                   To reset your password enter your email and your birthday
+                   and we'll send you a link to reset your password.
+               </p>
+               <form>
+                   <ul>
+                       <li>
+                           <input type="text" placeholder="Email" />
+                       </li>
+                       <li>
+                           <input type="submit" value="Send" class="button" />
+                       </li>
+                   </ul>
+               </form>
+           </div>
+           <!--/#register.form-action-->
+       </div>
+   </div>
+
+   <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+   <script src="js/access.js"></script>
+</body>
+</html>
