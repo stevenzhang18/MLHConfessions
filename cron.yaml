@@ -1,0 +1,8 @@
+cron:
+- description: Update datastore
+  url: /crontask
+  schedule: every 2 minutes
+
+# - description: Update datastore with sentiment
+#   url: /sentiment
+#   schedule: every 2 minutes

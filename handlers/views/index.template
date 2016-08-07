@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <!-- <link href="/static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
+    <!-- Custom CSS -->
+		<link href="/static/libs/bootstrap/css/style.css" rel="stylesheet">
+    <script src="/static/libs/bootstrap/js/jquery-3.1.0.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+		<link href="/static/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+
+	</head>
+
+
+	<body>
+    <!-- <h1 id="title">Major League Hacking Confessions</h1> -->
+		<img id="title" src="/static/libs/bootstrap/img/logos.png" />
+
+<div id="input">
+  <form id="inputform" method="post" action="/tweet">
+    <h2>Enter a message:</h2>
+		 <textarea class="hello" name="message" id="message" placeholder="Enter Tweet here..."  data-limit-rows="true" cols="60" rows="8"></textarea>
+		 <br>
+		<p id="alert">You have 140 characters remaining</p>
+    <h3>Enter a username to tweet at (optional):</h3>
+    <input id="name" name="person" placeholder=" Include the @!" type="text" name="person"></input>
+    <br>
+    <br>
+		<div class="set-2"><a href="#" onclick="document.getElementById('inputform').submit();"class="twitter-big"><b>Tweet</b></a></div>
+  </form>
+	<!--<a id="trendlink" style="text-decoration:none" href= '#'>Trends</a>-->
+
+</div>
+<div>
+	<a class="twitter-timeline" id="timeline" data-lang="en" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/MLH_Confessions">Tweets by MLH_Confessions</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+<script src="/static/libs/bootstrap/js/runtime.js"></script>
+
+	</body>
+</html>
